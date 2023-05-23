@@ -6,14 +6,14 @@ import path from 'path';
 // Creando una instancia del enrutador de express
 const router = Router();
 
-// GET /add-product
+// GET /admin/add-product
 router.get('/add-product', (req, res, next) => {
   // Servimos el formulario
   console.log("📢 Sirviendo formulario...");
   res.sendFile(path.resolve('views','add-product.html'));
 });
 
-// POST /add-product
+// POST /admin/add-product
 router.post('/add-product', (req, res) => {
   // Realizaremos la extracción de
   // parametros dentro de la peticion
