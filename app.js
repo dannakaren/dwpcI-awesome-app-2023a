@@ -5,6 +5,10 @@ import httpStatus from 'http-status';
 // Importando el enrutador
 import adminRouter from './routes/admin.route.js';
 import shopRouter from './routes/shop.route.js';
+
+//importando root dir, primer middleware en ser registrado debe ser el servidor estatico
+import { ROOT_DIR } from './helpers/paths.js';
+
 //import { path } from 'express/lib/application.js';
 import path from 'path';
 
@@ -15,6 +19,11 @@ const app = express();
 
 // Se registra el middleware del body-parser
 app.use(express.urlencoded({ extended: true }));
+
+//Se registra el middleware para servidor archivos estaticos
+app.use(express.static(path.join(ROOT_DIR, 'public')));
+
+
 
 // Se agrega ruta de administrador
 app.use('/admin', adminRouter);

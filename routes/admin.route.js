@@ -10,6 +10,9 @@ import {ROOT_DIR} from '../helpers/paths.js';
 // Creando una instancia del enrutador de express
 const router = Router();
 
+//creando datos en la mmoria volatil
+export const products = [];
+
 // GET /admin/add-product
 router.get('/add-product', (req, res, next) => {
   // Servimos el formulario
