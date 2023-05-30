@@ -29,7 +29,7 @@
   "homepage": "https://github.com/rivalcoba-dev/dwpcI-awesome-app#readme",
   "dependencies": {
     "-": "0.0.1",
-    "express": "4.18.2",
+    "express": "^4.18.2",
     "http": "0.0.1-security",
     "http-status": "^1.6.2",
     "status": "0.0.13"
