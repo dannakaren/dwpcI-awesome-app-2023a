@@ -13,7 +13,7 @@ import { products } from './admin.route.js';
 router.get('/', (req, res)=>{
   console.log(products);
   console.log("📢 Sirviendo la ruta '/'");
-  res.sendFile(path.resolve('views','shop.html'));
+  res.render('shop');
 });
 
 // GET /about
