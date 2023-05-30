@@ -21,13 +21,16 @@ router.get('/add-product', (req, res, next) => {
   res.sendFile(path.join(ROOT_DIR,'views','add-product.html'));
 });
 
+
 // POST /admin/add-product
 router.post('/add-product', (req, res) => {
-  // Realizaremos la extracción de
-  // parametros dentro de la peticion
-  console.log(req.body);
+  // Realizaremos la desestructuracion de
+  // "name" de la petición
+  const { title } = req.body;
+  // Agregamos el dato en la base de datos
+  products.push(title);
+  // Redireccionando
   res.redirect('/');
 });
-
 // Exportando el enrutador admin
 export default router;
