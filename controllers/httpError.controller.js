@@ -1,12 +1,12 @@
-// Importa los módulos 
+// Importa los módulos necesarios
 const express = require('express');
 
 // Crea una instancia del router de Express
 const router = express.Router();
 
-// Controlador para el error
+// Controlador para el error 404
 router.use((req, res) => {
-  res.status(error).render('error', {
+  res.status(404).render('error', {
     title: 'Error 404 - Página no encontrada',
     message: 'La página que estás buscando no existe.'
   });
@@ -23,3 +23,4 @@ router.use((err, req, res, next) => {
 
 // Exporta el módulo del controlador
 module.exports = router;
+
