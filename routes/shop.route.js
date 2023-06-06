@@ -1,5 +1,7 @@
 // Importando el enrutador de express
 import { Router } from 'express';
+
+
 // Importando Action funcion del controlador products
 import { getProducts } from '../controllers/products.controller.js';
 import { httpErr } from '../controllers/httpError.controller.js'
@@ -23,3 +25,4 @@ router.get('/about', (req, res) => {
 router.use('' , httpErr)
 
 export default router;
+

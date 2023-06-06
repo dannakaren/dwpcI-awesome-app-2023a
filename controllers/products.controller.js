@@ -28,6 +28,7 @@ export const postAddProduct = (req, res) => {
 export const getProducts = (req, res)=>{
   // Mostrando productos en memoria
   console.log("📢 Sirviendo la ruta '/'");
+  console.log(`📚 Lista productos ${JSON.stringify(products)}`);
   res.render('shop', { 
     shop: 'active', 
     docTitle:"Shop",
