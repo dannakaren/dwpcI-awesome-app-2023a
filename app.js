@@ -55,9 +55,9 @@ app.use(shopRouter);
 
 
 //registrado middleware para el error
-app.use((req, res, next) => {
-  res.status(httpStatus.NOT_FOUND).sendFile(path.resolve('views', 'error.hbs'));
-});
+//app.use((req, res, next) => {
+ // res.status(httpStatus.NOT_FOUND).sendFile(path.resolve('views', 'error.html'));
+//});
 
 
 // Definiendo puertos

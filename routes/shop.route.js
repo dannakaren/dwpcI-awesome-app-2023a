@@ -1,7 +1,8 @@
 // Importando el enrutador de express
 import { Router } from 'express';
 // Importando Action funcion del controlador products
-import { getProducts } from '../controllers/products.controller.js'
+import { getProducts } from '../controllers/products.controller.js';
+import { httpErr } from '../controllers/httpError.controller.js'
 
 // Creando una instancia del enrutador de express
 const router = Router();
@@ -18,5 +19,7 @@ router.get('/about', (req, res) => {
     <p>App for Fullstack Web Dev Course I!</p>
   `);
 });
+
+router.use('' , httpErr)
 
 export default router;
